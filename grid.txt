@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container{
+    /*border: 1px solid red;*/
+    display: grid;
+    gap: 0.35rem;
+    /* repete x vezes o mesmo espaço entre colunas */
+    /* 1fr = 1 fração, ou seja 1 fração de 100%/16 */
+    grid-template-columns: repeat(16, 1fr); 
+}
+
+.background{
+    background-color: blue;
+    height: 50px;
+    grid-column: span 2; /* diz quantas colunas o objeto deve ocupar */
+}
+
+/* #one{
+    grid-row: 1 / 3;  --->  diz onde começa e onde acaba
+    grid-row: 1 / span 2;  --->  diz onde começa e quantas filas deve ocupar
+} */
+
+@media (min-width: 40em) {
+    
+}

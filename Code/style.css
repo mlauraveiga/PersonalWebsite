@@ -1,7 +1,116 @@
-body{
-    margin: 0;
+/*----------------------- Geral ----------------------*/
+body {
+  margin: 0;
+  padding: 0;
 }
 
-#logo{
-    
+html {
+  scroll-behavior: smooth;
+}
+
+/* Grid */
+.grid-container {
+  width: 100vw;
+  /* border: 1px solid red; */
+  display: grid;
+  gap: 0.5rem;
+  /* repete x vezes o mesmo espaço entre colunas */
+  /* 1fr = 1 fração, ou seja 1 fração de 100%/16 */
+  grid-template-columns: repeat(16, 1fr);
+}
+
+/* Texto */
+.text {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  color: #000;
+  margin: 0;
+}
+
+/*----------------------- Menu ----------------------*/
+/* Mode Icons */
+
+.modeIcon {
+  overflow: visible;
+  position: sticky;
+  top: 0;
+  height: 5vh;
+}
+
+#luaIcon {
+  position: absolute;
+  top: 1.5vw;
+  right: 1.5vw;
+  width: 2.5%;
+}
+
+/* Arrow Icons */
+
+.arrow {
+  position: sticky;
+  top: 5vh;
+  right: 0;
+  height: 5vh;
+  transform: translate(0, 90vh);
+}
+
+#arrowIcon {
+  position: absolute;
+  bottom: 1.5vw;
+  right: 2vw;
+  width: 2%;
+  transition: all 1s;
+}
+
+.hide{
+    opacity: 0;
+}
+
+.show{
+    opacity: 1;
+}
+
+/*----------------------- Landing Page ----------------------*/
+/* Logo */
+#landingpage {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.landingpage_logo {
+  grid-column-start: 3;
+  grid-column-end: 8;
+}
+
+#landingpage_logo {
+  width: 100%;
+}
+
+/* Texto: Hello */
+
+.landingpage_text {
+  position: absolute;
+  bottom: 0;
+  grid-column-start: 9;
+  grid-column-end: 16;
+}
+
+#landingpage_text_hello {
+  font-weight: normal;
+  font-size: 6vw;
+}
+
+#landingpage_text_text {
+  font-weight: lighter;
+  font-size: 3vw;
+}
+
+#landingpage_text_prof {
+  font-weight: 600;
+  font-size: 3vw;
+}
+
+.block {
+  margin-top: 100vh;
 }
