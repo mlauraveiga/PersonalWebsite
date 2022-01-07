@@ -1,13 +1,12 @@
 /*----------------------- Geral ----------------------*/
 html {
   scroll-behavior: smooth;
-  background-color: white;
-  cursor: none;
 }
 
 body {
   margin: 0;
   padding: 0;
+  width: 100vw;
 }
 
 a {
@@ -29,41 +28,50 @@ a {
 .text {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  color: #000;
   margin: 0;
 }
 
-/*----------------------- Icons ----------------------*/
-
-/*----- Cursor -----*/
-#cursor {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: #fff;
-  border-radius: 50%;
-  top: var(--y, 0);
-  left: var(--x, 0);
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  mix-blend-mode: difference;
-  transition: transform 0.2s;
-  pointer-events: none;
+/*----- Cores -----*/
+.white{
+  color: #fff;
 }
+
+.background_white{
+  background-color: #fff;
+}
+
+.border_white{
+  border-style: solid;
+  border-color: #fff;
+}
+
+.black{
+  color:#000;
+}
+
+.background_black{
+  background-color: #161616;
+}
+
+.border_black{
+  border-style: solid;
+  border-color: #000;
+  border-width: 1px;
+}
+
+/*----------------------- Icons ----------------------*/
 
 /*----- Mode Icons -----*/
 .modeIcon {
   overflow: visible;
   position: sticky;
   top: 0;
-  height: 5vh;
 }
 
-#luaIcon {
+#modeIcon {
   position: absolute;
-  top: 1.5vw;
-  right: 1.5vw;
-  width: 2.5%;
+  z-index: 1;
+  cursor: pointer;
 }
 
 /*----- Arrow Icons -----*/
@@ -78,10 +86,7 @@ a {
 
 #arrowIcon {
   position: absolute;
-  bottom: 1.5vw;
-  right: 2vw;
-  width: 2%;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .hide {
@@ -98,12 +103,10 @@ a {
   position: sticky;
   top: 0;
   left: 0%;
-  width: 6.25vw;
-  height: 100vh;
+  bottom: 0;
   margin: 0;
   padding: 0;
   transition: all 0.5s;
-  background-color: #fff;
   z-index: 1;
 }
 
@@ -123,7 +126,7 @@ a {
   height: 100vh;
   right: 0;
   top: 0px;
-  border: 0.5px solid #000000;
+  border-width: 0.5px;
 }
 
 /*----- Logo -----*/
@@ -132,7 +135,6 @@ a {
   top: 2vh;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 4vw;
 }
 
 #menu_logo {
@@ -149,13 +151,7 @@ a {
 
 .menu_nav_option {
   transform: rotate(-90deg);
-  width: 12vw;
   text-align: center;
-  font-size: 3vw;
-}
-
-#menu_about {
-  margin-top: 10vw;
 }
 
 /*----- Social Icones -----*/
@@ -166,23 +162,12 @@ a {
   bottom: 0;
 }
 
-.iconSocial {
-  width: 3.2vw;
-  transform: translate(45%, 0);
-  margin-bottom: 1vh;
-}
-
 /*----------------------- Landing Page ----------------------*/
 /*----- Logo -----*/
 #landingpage {
   position: absolute;
   top: 50%;
   transform: translate(0%, -50%);
-}
-
-.landingpage_logo {
-  grid-column-start: 3;
-  grid-column-end: 8;
 }
 
 #landingpage_logo {
@@ -192,24 +177,18 @@ a {
 /*----- Texto: Hello -----*/
 .landingpage_text {
   position: absolute;
-  bottom: 0;
-  grid-column-start: 9;
-  grid-column-end: 16;
 }
 
 #landingpage_text_hello {
   font-weight: normal;
-  font-size: 6vw;
 }
 
 #landingpage_text_text {
   font-weight: lighter;
-  font-size: 3vw;
 }
 
 #landingpage_text_prof {
   font-weight: 600;
-  font-size: 3vw;
 }
 
 /*----- Arrows Down / Scroll -----*/
@@ -231,14 +210,13 @@ a {
   text-align: center;
   display: block;
   justify-content: center;
-  opacity: 0.4;
   width: 10%;
+  opacity: 0.4;
   animation: downarrow 0.5s infinite alternate ease-in-out;
   z-index: 1;
 }
 
 #landingpage_scroll_arrowdown_img {
-  width: 2vw;
   margin: 0 auto;
 }
 
@@ -253,34 +231,423 @@ a {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  grid-column-start: 3;
-  grid-column-end: 12;
 }
 
 #text_messy_text {
   font-weight: lighter;
-  font-size: 2.5vw;
 }
 
-.messy_letters{
+.messy_letters {
   display: inline-block;
   transition: all 0.3s;
   font-weight: lighter;
-  font-size: 2.5vw;
 }
 
-#letters{
+#letters {
   position: absolute;
   top: 50%;
   transform: translate(0, 100%);
-  grid-column: 8 / span 3;
-  margin-left: 1vw;
 }
 
 /*----------------------- Work ----------------------*/
 #work {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   width: 100vw;
-  height: 100vh;
-  margin-top: 90vh;
+  height: auto;
+  margin-top: 95vh;
+  overflow: hidden;
+}
+
+/* Títulos */
+#work_titulo {
+  margin-bottom: 5vw;
+}
+
+.fixed {
+  transform: translate(0, 0);
+  transition: all 2s;
+}
+
+.goright {
+  transform: translate(30%, 0);
+  transition: all 2s;
+}
+
+.goleft {
+  transform: translate(-30%, 0);
+  transition: all 2s;
+}
+
+/* Efeito Imagens*/
+.work_squares {
+  position: relative;
+}
+.work_squares::before,
+.work_squares::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 99%;
+  z-index: -1;
+  border: 1px solid #000;
+  transition: all 0.25s ease-out;
+}
+.work_squares::before {
+  background-color: #000;
+  top: 3%;
+  left: 3%;
+  z-index: -1;
+}
+.work_squares::after {
+  bottom: 3%;
+  right: 3%;
+}
+.work_squares:hover::before {
+  top: -3%;
+  left: -3%;
+}
+.work_squares:hover::after {
+  bottom: -3%;
+  right: -3%;
+}
+
+/*----------------------- About ----------------------*/
+#about {
+  width: 100vw;
+  margin-top: 15vh;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding-bottom: 10vh;
+}
+
+#about_titulo {
+  height: auto;
+  margin-bottom: 5vw;
+}
+
+.about_image {
+  width: 100%;
+}
+
+/*----------------------------------------------------*/
+/*----------------------- Ecrãs ----------------------*/
+/*------------------ Web ------------------*/
+@media (min-width: 582px) {
+  html{
+    cursor: none;
+  }
+
+  /*--------- Icones ---------*/
+  /* Cursor */
+  #cursor {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    top: var(--y, 0);
+    left: var(--x, 0);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    mix-blend-mode: difference;
+    transition: transform 0.2s;
+    pointer-events: none;
+  }
+
+  /* Mode Icons */
+  #modeIcon {
+    position: absolute;
+    top: 1.5vw;
+    right: 1.5vw;
+    width: 2.5%;
+  }
+
+  /* Mode Icons */
+
+  /* Arrow Icon */
+  #arrowIcon {
+    bottom: 1.5vw;
+    right: 2vw;
+    width: 2%;
+  }
+
+  /*--------- Menu ---------*/
+  #menu {
+    width: 6.25vw;
+    height: 100vh;
+  }
+
+  .menu_logo {
+    width: 4vw;
+  }
+
+  .menu_nav_option {
+    width: 12vw;
+    font-size: 3vw;
+  }
+
+  #menu_about {
+    margin-top: 10vw;
+  }
+
+  .iconSocial {
+    width: 3.2vw;
+    transform: translate(45%, 0);
+    margin-bottom: 1vh;
+  }
+
+  /*--------- Landing Page ---------*/
+  /* Logo */
+  .landingpage_logo {
+    grid-column-start: 3;
+    grid-column-end: 8;
+  }
+
+  /* Texto */
+  .landingpage_text {
+    bottom: 0;
+    grid-column-start: 9;
+    grid-column-end: 16;
+  }
+
+  #landingpage_text_hello {
+    font-size: 6vw;
+  }
+
+  #landingpage_text_text {
+    font-size: 3vw;
+  }
+
+  #landingpage_text_prof {
+    font-size: 3vw;
+  }
+
+  /* Arrow */
+  #landingpage_scroll_arrowdown_img {
+    width: 2vw;
+  }
+
+  /*--------- Messy Text ---------*/
+  #messy_div {
+    grid-column-start: 3;
+    grid-column-end: 10;
+  }
+
+  #text_messy_text {
+    font-size: 2.5vw;
+  }
+
+  .messy_letters {
+    font-size: 2.5vw;
+  }
+
+  #letters {
+    grid-column: 8 / span 3;
+    margin-left: 1vw;
+  }
+
+  /*--------- Work ---------*/
+  #work_titulo {
+    grid-column-start: 2;
+    grid-column-end: 17;
+  }
+
+  .works {
+    font-size: 4.35vw;
+  }
+
+  #work_greenspace {
+    grid-column: 5 / 10;
+    margin-bottom: 5vh;
+  }
+
+  #work_fotografia {
+    grid-column: 11 / 16;
+    margin-bottom: 5vh;
+  }
+
+  #work_escher {
+    grid-column: 7 / 12;
+    margin-bottom: 5vh;
+  }
+
+  #work_fixling {
+    grid-column: 3 / 8;
+    margin-bottom: 5vh;
+  }
+
+  #work_tshirtcaloiro {
+    grid-column: 10 / 15;
+    margin-bottom: 5vh;
+  }
+
+  .work_image {
+    width: 100%;
+  }
+
+  /*--------- About ---------*/
+  #about_titulo {
+    grid-column-start: 2;
+    grid-column-end: 17;
+  }
+
+  .abouts {
+    font-size: 4vw;
+  }
+
+  #about_text {
+    grid-column: 3 / span 6;
+    transform: translate(0, 15%);
+  }
+
+  #about_text_text {
+    font-size: 1.2vw;
+  }
+
+  #about_foto {
+    grid-column: 10 / span 5;
+  }
+}
+
+/*------------------ Mobile ------------------*/
+@media (max-width: 581px) {
+  /*--------- Icones ---------*/
+  /* Mode Icons */
+  #modeIcon {
+    position: absolute;
+    top: 3.5vw;
+    right: 2.5vw;
+    width: 6%;
+  }
+
+  /* Arrow Icon */
+  #arrowIcon {
+    bottom: 3.5vw;
+    right: 2.5vw;
+    width: 6%;
+  }
+
+  /*--------- Menu ---------*/
+  #menu {
+    width: 18.75vw;
+    height: 100vh;
+  }
+
+  .menu_logo {
+    width: 12vw;
+  }
+
+  .menu_nav_option {
+    width: 36vw;
+    font-size: 9vw;
+  }
+
+  #menu_about {
+    margin-top: 30vw;
+  }
+
+  .iconSocial {
+    width: 10vw;
+    transform: translate(40%, 0);
+    margin-bottom: 2vh;
+  }
+
+  /*--------- Landing Page ---------*/
+  /* Logo */
+  .landingpage_logo {
+    grid-column-start: 4;
+    grid-column-end: 14;
+    transform: translate(0, -20%);
+  }
+
+  /* Texto */
+  .landingpage_text {
+    bottom: -60%;
+    grid-column-start: 4;
+    grid-column-end: 17;
+  }
+
+  #landingpage_text_hello {
+    font-size: 12vw;
+  }
+
+  #landingpage_text_text {
+    font-size: 5vw;
+  }
+
+  #landingpage_text_prof {
+    font-size: 5vw;
+  }
+
+  /* Arrow */
+  #landingpage_scroll_arrowdown_img {
+    width: 6vw;
+  }
+
+  /*--------- Messy Text ---------*/
+  #messy_div {
+    grid-column-start: 5;
+    grid-column-end: 16;
+  }
+
+  #text_messy_text {
+    font-size: 5vw;
+  }
+
+  .messy_letters {
+    font-size: 5vw;
+  }
+
+  #letters {
+    grid-column: 5 / span 4;
+    transform: translate(0, 250%);
+  }
+
+  /*--------- Work ---------*/
+  .works {
+    font-size: 7.5vw;
+  }
+
+  #work_titulo {
+    grid-column-start: 4;
+    grid-column-end: 20;
+  }
+
+  #work_greenspace,
+  #work_fotografia,
+  #work_escher,
+  #work_fixling,
+  #work_tshirtcaloiro {
+    grid-column: 5 / 16;
+    margin-bottom: 5vh;
+  }
+
+  .work_image {
+    width: 100%;
+    height: 68.75vw;
+  }
+
+  /*--------- About ---------*/
+  #about_titulo {
+    grid-column-start: 4;
+    grid-column-end: 20;
+  }
+
+  .abouts {
+    font-size: 7vw;
+  }
+
+  #about_text {
+    grid-column: 5 / 16;
+    transform: translate(0, 0);
+  }
+
+  #about_text_text {
+    font-size: 3vw;
+  }
+
+  #about_foto {
+    grid-column: 5 / 16;
+    transform: translate(0, 10%);
+  }
 }
