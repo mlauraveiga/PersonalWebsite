@@ -1,14 +1,20 @@
 /*----------------------- Geral ----------------------*/
+html {
+  scroll-behavior: smooth;
+  background-color: white;
+  cursor: none;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
+a {
+  text-decoration: none;
 }
 
-/* Grid */
+/*----- Grid -----*/
 .grid-container {
   width: 100vw;
   /* border: 1px solid red; */
@@ -19,7 +25,7 @@ html {
   grid-template-columns: repeat(16, 1fr);
 }
 
-/* Texto */
+/*----- Texto -----*/
 .text {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -27,9 +33,25 @@ html {
   margin: 0;
 }
 
-/*----------------------- Menu ----------------------*/
-/* Mode Icons */
+/*----------------------- Icons ----------------------*/
 
+/*----- Cursor -----*/
+#cursor {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  top: var(--y, 0);
+  left: var(--x, 0);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  mix-blend-mode: difference;
+  transition: transform 0.2s;
+  pointer-events: none;
+}
+
+/*----- Mode Icons -----*/
 .modeIcon {
   overflow: visible;
   position: sticky;
@@ -44,8 +66,7 @@ html {
   width: 2.5%;
 }
 
-/* Arrow Icons */
-
+/*----- Arrow Icons -----*/
 .arrow {
   position: sticky;
   top: 5vh;
@@ -62,16 +83,62 @@ html {
   transition: all 1s;
 }
 
-.hide{
-    opacity: 0;
+.hide {
+  opacity: 0;
 }
 
-.show{
-    opacity: 1;
+.show {
+  opacity: 1;
 }
+
+/*----------------------- Menu ----------------------*/
+/*----- Geral -----*/
+.menu{
+  position: sticky;
+  top: 0vh;
+  left: 0;
+  width: 6.25vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/*----- Linha -----*/
+#menu_linha {
+  position: absolute;
+  height: 100vh;
+  right: 0;
+  top: 0px;
+  border: 0.5px solid #000000;
+}
+
+/*----- Navigation Options -----*/
+.menu_nav{
+  position: absolute;
+  left: -50%;
+  top: 30%;
+  display: block;
+}
+
+.menu_nav_option{
+  transform: rotate(-90deg);
+  width: 12vw;
+  text-align: center;
+  font-size: 3vw;
+}
+
+#menu_about{
+  margin-top: 12vw;;
+}
+
+/*----- Social Icones -----*/
+.iconSocial{
+  width: 4vw;
+}
+
 
 /*----------------------- Landing Page ----------------------*/
-/* Logo */
+/*----- Logo -----*/
 #landingpage {
   position: absolute;
   top: 50%;
@@ -87,7 +154,7 @@ html {
   width: 100%;
 }
 
-/* Texto: Hello */
+/*----- Texto: Hello -----*/
 
 .landingpage_text {
   position: absolute;
@@ -113,4 +180,40 @@ html {
 
 .block {
   margin-top: 100vh;
+}
+
+/*----- Arrows Down / Scroll -----*/
+
+#landingpage_scroll_text {
+  font-weight: lighter;
+  font-size: 1rem;
+  margin-bottom: 10%;
+}
+
+@keyframes downarrow {
+  0% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(0.1em);
+    opacity: 0.9;
+  }
+}
+
+.arrowdown {
+  position: absolute;
+  bottom: 3%;
+  left: 45%;
+  text-align: center;
+  display: block;
+  justify-content: center;
+  opacity: 0.4;
+  width: 10%;
+  animation: downarrow 0.5s infinite alternate ease-in-out;
+}
+
+#landingpage_scroll_arrowdown_img {
+  width: 2vw;
+  margin: 0 auto;
 }

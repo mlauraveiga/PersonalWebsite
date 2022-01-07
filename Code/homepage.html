@@ -11,7 +11,10 @@
     <title>Laura Veiga Portfolio</title>
   </head>
   <body> 
-      <!----------------------------- Menu ---------------------------->
+      <!----------------------------- Icones ---------------------------->
+      <!-- Cursor -->
+      <div id="cursor"></div>
+      
       <!-- Mode Icon -->
       <div class="modeIcon">
           <img src="Imagens/lua.png" alt="lua" id="luaIcon" >
@@ -21,6 +24,25 @@
       <div class="arrow">
          <a href="#top"><img src="Imagens/seta.png" alt="seta" id="arrowIcon" class="hide"></a>
       </div>
+
+
+      <!----------------------------- Menu ---------------------------->
+      <div class="menu">
+        <!-- Linha -->
+        <div id="menu_linha"></div>
+        <!-- Navegação -->
+        <div class="menu_nav">
+          <div class="menu_nav_option text" id="menu_work"><a href="#work">WORK</a></div>
+          <div class="menu_nav_option text" id="menu_about">ABOUT</div>
+        </div>
+        <!-- Icones Social Media -->
+        <div class="menu_icones">
+          <a href=""><img src="Imagens/behance_logo_preto" alt="behance" class="iconSocial"></a>
+          <a href=""><img src="Imagens/linkdin_logo_preto.png" alt="linkdin" class="iconSocial"></a>
+          <a href=""><img src="Imagens/instagram_logo_preto.png" alt="instagram" class="iconSocial"></a>
+        </div>
+      </div>
+
 
       <!----------------------------- Landing Page ---------------------------->
       <div class="grid-container" id="landingpage">
@@ -34,16 +56,24 @@
         </div>
       </div>
 
+      <!-- Arrows Down -->
+      <div id="landingpage_scroll">
+        <a href="#" class="arrowdown">
+          <p class="text" id="landingpage_scroll_text">scroll</p>
+          <img src="Imagens/setabaixo.png" alt="scroll" id=landingpage_scroll_arrowdown_img>
+        </a>
+      </div>
+
       <!----------------------------- Texto Messy ---------------------------->
       <div class="block">
           <img src="Imagens/logo.png" alt="logo">
       </div>
 
       <!----------------------------- Work ---------------------------->
-
+      <div id="work"></div>
 
       <!----------------------------- About ---------------------------->
-      
+      <div id="about"></div>
       
       <!----------------------------- JS Scripts ---------------------------->
       <script src="script.js"></script>
