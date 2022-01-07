@@ -1,81 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Ubuntu:400,500,700" rel="stylesheet">
-    <link rel="icon" type="image/png" href="Imagens/logo.png" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <title>Laura Veiga Portfolio</title>
-  </head>
-  <body> 
-      <!----------------------------- Icones ---------------------------->
-      <!-- Cursor -->
-      <div id="cursor"></div>
-      
-      <!-- Mode Icon -->
-      <div class="modeIcon">
-          <img src="Imagens/lua.png" alt="lua" id="luaIcon" >
-      </div>
 
-      <!-- Seta Icon -->
-      <div class="arrow">
-         <a href="#top"><img src="Imagens/seta.png" alt="seta" id="arrowIcon" class="hide"></a>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900|Ubuntu:400,500,700" rel="stylesheet">
+  <link rel="icon" type="image/png" href="Imagens/logo.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <title>Laura Veiga Portfolio</title>
+</head>
 
+<body>
+  <!----------------------------- Icones ---------------------------->
+  <!-- Cursor -->
+  <div id="cursor"></div>
 
-      <!----------------------------- Menu ---------------------------->
-      <div class="menu">
-        <!-- Linha -->
-        <div id="menu_linha"></div>
-        <!-- Navegação -->
-        <div class="menu_nav">
-          <div class="menu_nav_option text" id="menu_work"><a href="#work">WORK</a></div>
-          <div class="menu_nav_option text" id="menu_about">ABOUT</div>
-        </div>
-        <!-- Icones Social Media -->
-        <div class="menu_icones">
-          <a href=""><img src="Imagens/behance_logo_preto" alt="behance" class="iconSocial"></a>
-          <a href=""><img src="Imagens/linkdin_logo_preto.png" alt="linkdin" class="iconSocial"></a>
-          <a href=""><img src="Imagens/instagram_logo_preto.png" alt="instagram" class="iconSocial"></a>
-        </div>
-      </div>
+  <!-- Mode Icon -->
+  <div class="modeIcon">
+    <img src="Imagens/lua.png" alt="lua" id="luaIcon">
+  </div>
+
+  <!-- Seta Icon -->
+  <div class="arrow">
+    <a href="#top"><img src="Imagens/seta.png" alt="seta" id="arrowIcon" class="hide"></a>
+  </div>
 
 
-      <!----------------------------- Landing Page ---------------------------->
-      <div class="grid-container" id="landingpage">
-        <div class="landingpage_logo">
-            <img src="Imagens/logo.png" alt="logo" id="landingpage_logo">
-        </div>
-        <div class="landingpage_text">
-            <h1 id="landingpage_text_hello" class="text">Hello!</h1>
-            <p id="landingpage_text_text" class="text">I'm Laura Veiga </br>
-                and I'm a <span id="landingpage_text_prof" class="text">graphic designer</span></p>
-        </div>
-      </div>
+  <!----------------------------- Menu ---------------------------->
+  <div id="menu" class="menu menu_hide">
+    <!-- Linha -->
+    <div id="menu_linha"></div>
+    <!-- Logo -->
+    <div class="menu_logo">
+      <a href="#top"><img src="Imagens/logo.png" alt="logo" id="menu_logo"></a>
+    </div>
+    <!-- Navegação -->
+    <div class="menu_nav">
+      <a href="#work">
+        <div class="menu_nav_option text" id="menu_work">WORK</div>
+      </a>
+      <a href="#about">
+        <div class="menu_nav_option text" id="menu_about">ABOUT</div>
+      </a>
+    </div>
+    <!-- Icones Social Media -->
+    <div class="menu_icones">
+      <a href="https://www.behance.net/lauraveiga1" target="_blank"><img src="Imagens/behance_logo_preto.png"
+          alt="behance" class="iconSocial"></a>
+      <a href="https://www.linkedin.com/in/mlauraveiga/" target="_blank"><img src="Imagens/linkedin_logo_preto.png"
+          alt="linkdin" class="iconSocial"></a>
+      <a href="https://www.instagram.com/laura_veiga23/" target="_blank"><img src="Imagens/instagram_logo_preto.png"
+          alt="instagram" class="iconSocial"></a>
+    </div>
+  </div>
 
-      <!-- Arrows Down -->
-      <div id="landingpage_scroll">
-        <a href="#" class="arrowdown">
-          <p class="text" id="landingpage_scroll_text">scroll</p>
-          <img src="Imagens/setabaixo.png" alt="scroll" id=landingpage_scroll_arrowdown_img>
-        </a>
-      </div>
 
-      <!----------------------------- Texto Messy ---------------------------->
-      <div class="block">
-          <img src="Imagens/logo.png" alt="logo">
-      </div>
+  <!----------------------------- Landing Page ---------------------------->
+  <div class="grid-container" id="landingpage">
+    <div class="landingpage_logo">
+      <img src="Imagens/logo.png" alt="logo" id="landingpage_logo">
+    </div>
+    <div class="landingpage_text">
+      <h1 id="landingpage_text_hello" class="text">Hello!</h1>
+      <p id="landingpage_text_text" class="text">I'm Laura Veiga </br>
+        and I'm a <span id="landingpage_text_prof" class="text">graphic designer</span></p>
+    </div>
+  </div>
 
-      <!----------------------------- Work ---------------------------->
-      <div id="work"></div>
+  <!-- Arrows Down -->
+  <div id="landingpage_scroll">
+    <a href="#textmessy" class="arrowdown">
+      <img src="Imagens/setabaixo.png" alt="scroll" id=landingpage_scroll_arrowdown_img>
+    </a>
+  </div>
 
-      <!----------------------------- About ---------------------------->
-      <div id="about"></div>
-      
-      <!----------------------------- JS Scripts ---------------------------->
-      <script src="script.js"></script>
-  </body>
+  <!----------------------------- Texto Messy ---------------------------->
+  <div class="grid-container" id="textmessy">
+    <div id="messy_div">
+      <p id="text_messy_text" class="text">Ok, I'll be honest, I haven't figured <br>
+        out what I want to do yet, so this <br>
+        website will bring together several <br>
+        areas and may get a little </p>
+    </div>
+    <div id="letters">
+      <div id="messy_m" class="messy_letters text"> M</div>
+      <div id="messy_e" class="messy_letters text">E</div>
+      <div id="messy_s1" class="messy_letters text">S</div>
+      <div id="messy_s2" class="messy_letters text">S</div>
+      <div id="messy_y" class="messy_letters text">Y</div>
+    </div>
+  </div>
+
+  <!----------------------------- Work ---------------------------->
+  <div id="work"></div>
+
+  <!----------------------------- About ---------------------------->
+  <div id="about"></div>
+
+  <!----------------------------- JS Scripts ---------------------------->
+  <script src="script.js"></script>
+</body>
+
 </html>
