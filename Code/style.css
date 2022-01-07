@@ -1,6 +1,7 @@
 /*----------------------- Geral ----------------------*/
 html {
   scroll-behavior: smooth;
+  background-color: white;
 }
 
 body {
@@ -28,35 +29,8 @@ a {
 .text {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
+  color: #000;
   margin: 0;
-}
-
-/*----- Cores -----*/
-.white{
-  color: #fff;
-}
-
-.background_white{
-  background-color: #fff;
-}
-
-.border_white{
-  border-style: solid;
-  border-color: #fff;
-}
-
-.black{
-  color:#000;
-}
-
-.background_black{
-  background-color: #161616;
-}
-
-.border_black{
-  border-style: solid;
-  border-color: #000;
-  border-width: 1px;
 }
 
 /*----------------------- Icons ----------------------*/
@@ -66,12 +40,11 @@ a {
   overflow: visible;
   position: sticky;
   top: 0;
+  height: 5vh;
 }
 
-#modeIcon {
+#luaIcon {
   position: absolute;
-  z-index: 1;
-  cursor: pointer;
 }
 
 /*----- Arrow Icons -----*/
@@ -107,6 +80,7 @@ a {
   margin: 0;
   padding: 0;
   transition: all 0.5s;
+  background-color: #fff;
   z-index: 1;
 }
 
@@ -126,7 +100,7 @@ a {
   height: 100vh;
   right: 0;
   top: 0px;
-  border-width: 0.5px;
+  border: 0.5px solid #000000;
 }
 
 /*----- Logo -----*/
@@ -355,7 +329,7 @@ a {
   }
 
   /* Mode Icons */
-  #modeIcon {
+  #luaIcon {
     position: absolute;
     top: 1.5vw;
     right: 1.5vw;
@@ -513,7 +487,7 @@ a {
 @media (max-width: 581px) {
   /*--------- Icones ---------*/
   /* Mode Icons */
-  #modeIcon {
+  #luaIcon {
     position: absolute;
     top: 3.5vw;
     right: 2.5vw;

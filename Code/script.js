@@ -27,27 +27,6 @@ $(document).scroll(function () {
   window.addEventListener("scroll", myScrollFunc);
 });
 
-// Change mode
-$("#modeIcon").click(function () {
-  var preto = document.getElementsByClassName("black");
-  var background_branco = document.getElementsByClassName("background_white");
-  var border_preto = document.getElementsByClassName("border_black");
-  $(preto).changeClass("white");
-  $(background_branco).changeClass("background_black");
-  $(border_preto).changeClass("border_white");
-
-  var branco = document.getElementsByClassName("white");
-  var background_preto = document.getElementsByClassName("background_black");
-  var border_branco = document.getElementsByClassName("border_white");
-  $(branco).changeClass("black");
-  $(background_preto).changeClass("background_white");
-  $(border_branco).changeClass("border_black");
-});
-
-function changeImage() {
-  var modeIcon = document.getElementById("luaIcon");
-  modeIcon.src = "Imagens/sol.png";
-}
 
 //----------------------------- Menu ----------------------------
 // Show menu
